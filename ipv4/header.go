@@ -74,6 +74,7 @@ func (h Header) SetDSCP(dscp uint8) {
 func (h Header) SetECN(ecn uint8) {
 	h[1] = h[1]&0b11111100 | ecn&0b11
 }
+
 func (h Header) SetTotalLen(totalLen uint16) {
 	h[2] = uint8(totalLen >> 8)
 	h[3] = uint8(totalLen)
